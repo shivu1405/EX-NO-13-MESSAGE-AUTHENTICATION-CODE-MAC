@@ -65,6 +65,7 @@ int main()
 
 ## Output:
 
+![MAC Algorithm Output](https://raw.githubusercontent.com/shivu1405/EX-NO-13-MESSAGE-AUTHENTICATION-CODE-MAC/3e29af412484366f3edfe0000eab1d9a818bd28c/Screenshot%202026-03-16%20091352.png)
 
 ## Result:
 The program is executed successfully.
