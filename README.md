@@ -25,7 +25,42 @@ To implement MESSAGE AUTHENTICATION CODE(MAC)
 5. Security: The security of the MAC relies on the secret key \( K \) and the strength of the hash function \( H \), ensuring that an attacker cannot forge a valid MAC without knowledge of the key.
 
 ## Program:
+```
+#include <stdio.h>
+#include <string.h>
 
+// Simple MAC using XOR for demonstration
+int main()
+{
+    char message[100], key[100], mac[100];
+    int i, len;
+
+    printf("Enter the message: ");
+    scanf("%s", message);
+
+    printf("Enter the secret key: ");
+    scanf("%s", key);
+
+    len = strlen(message);
+
+    // Generate MAC
+    for(i = 0; i < len; i++)
+    {
+        mac[i] = message[i] ^ key[i % strlen(key)];
+    }
+    mac[len] = '\0';
+
+    printf("\nGenerated MAC: ");
+    for(i = 0; i < len; i++)
+    {
+        printf("%02X", mac[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+```
 
 
 ## Output:
